@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Details - Farmzy</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <div id="app-container">
+        <!-- Navbar -->
+        <header>
+            <div class="logo-container" onclick="window.location.href='home.html'">
+                <img id="main-logo" alt="Farmzy Logo" class="logo-img">
+                <h1>Farmzy</h1>
+            </div>
+            <div class="header-actions">
+                <div class="cart-wrapper" onclick="toggleCart()" style="position: relative; cursor: pointer; display: flex; align-items: center;">
+                    <span style="font-size: 22px;">🛒</span>
+                    <span id="cart-badge" class="badge badge-danger" style="position: absolute; top: -8px; right: -8px; display: none; width: 20px; height: 20px; justify-content: center; align-items: center; border-radius: 50%; padding: 0;">0</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Cart Drawer (Same as home) -->
+        <div id="cart-overlay" class="cart-overlay" onclick="toggleCart()"></div>
+        <div id="cart-drawer" class="cart-drawer">
+            <div class="cart-header">
+                <h3>Your Cart</h3>
+                <span style="cursor: pointer; font-size: 24px;" onclick="toggleCart()">&times;</span>
+            </div>
+            <div id="cart-body" class="cart-body"></div>
+            <div class="cart-footer">
+                <div class="flex justify-between mb-4">
+                    <span class="font-bold">Total:</span>
+                    <span class="font-bold" id="cart-total">₹0</span>
+                </div>
+                <button onclick="checkout()">Checkout</button>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="section-box" style="max-width: 600px; margin: 0 auto;">
+                <button class="outline mb-4" style="width: auto;" onclick="window.location.href='home.html'">← Back</button>
+                <div id="crop-details">
+                    <!-- Rendered via JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="assets.js"></script>
+    <script src="user.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Note: routing is also handled in user.js
+        });
+    </script>
+</body>
+</html>

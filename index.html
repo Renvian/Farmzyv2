@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Farmzy - Redirecting...</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+
+
+    <script>
+        async function init() {
+            const { data: { session } } = await _supabase.auth.getSession();
+            if (!session) {
+                window.location.href = 'login.html';
+            } else {
+                const { data: profile } = await _supabase
+                    .from('profiles').select('role').eq('id', session.user.id).single();
+                
+                if (profile && profile.role === 'admin') window.location.href = 'admin.html';
+                else if (profile && profile.role === 'farmer') window.location.href = 'farmer.html';
+                else window.location.href = 'home.html';
+            }
+        }
+        init();
+    </script>
+</body>
+</html>

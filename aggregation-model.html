@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Aggregation Model - Farmzy</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body>
+    <div id="app-container">
+        <!-- Navbar -->
+        <header>
+            <div class="logo-container" onclick="window.location.href='home.html'" style="cursor: pointer;">
+                <img id="main-logo" alt="Farmzy Logo" class="logo-img">
+                <h1>Farmzy</h1>
+            </div>
+            <div class="header-actions">
+                <a href="home.html" class="link" style="margin-top:0;">Back to Home</a>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="section-box"
+                style="max-width: 800px; margin: 0 auto; text-align: center; padding-top: var(--spacing-xl); padding-bottom: var(--spacing-xl);">
+                <h1 style="font-size: 2.5rem; margin-bottom: var(--spacing-md);">How Farmzy Works</h1>
+                <p class="text-muted mb-4" style="font-size: 1.1rem;">Revolutionizing the agricultural supply chain
+                    through smart aggregation.</p>
+
+                <img src="https://t4.ftcdn.net/jpg/07/79/87/99/360_F_779879987_q07dPVE0GjTYtqT0xCkFjKp6UHj84jT5.jpg"
+                    alt="Farmzy Aggregation"
+                    style="width: 100%; border-radius: var(--border-radius-lg); margin-bottom: var(--spacing-lg); height: 300px; object-fit: cover;">
+
+                <div class="grid-container" style="text-align: left; margin-top: var(--spacing-lg);">
+
+                    <div class="card" style="padding: var(--spacing-md); box-shadow: none;">
+                        <div class="mb-4" style="font-size: 2rem;">👨‍🌾</div>
+                        <h3>1. Empowering Farmers</h3>
+                        <p class="text-muted">We assign demand-based targets directly to farmers. They grow exactly what
+                            the market needs, reducing waste and ensuring guaranteed sales.</p>
+                    </div>
+
+                    <div class="card" style="padding: var(--spacing-md); box-shadow: none;">
+                        <div class="mb-4" style="font-size: 2rem;">🔄</div>
+                        <h3>2. Smart Aggregation</h3>
+                        <p class="text-muted">Farmers submit their harvest quantities through our app. Our aggregation
+                            centers consolidate these into a unified inventory, ready for distribution.</p>
+                    </div>
+
+                    <div class="card" style="padding: var(--spacing-md); box-shadow: none;">
+                        <div class="mb-4" style="font-size: 2rem;">🛒</div>
+                        <h3>3. Fresh to Consumers</h3>
+                        <p class="text-muted">Consumers get access to an always-fresh marketplace. Real-time freshness
+                            tracking ensures you know exactly the quality you're buying.</p>
+                    </div>
+
+                </div>
+
+                <hr>
+
+                <div style="text-align: left;">
+                    <h3>The Benefit</h3>
+                    <p class="text-muted mt-2">
+                        Traditional supply chains involve multiple middlemen, leading to price markups for consumers and
+                        low margins for farmers. Farmzy acts as a single, transparent aggregator. By predicting demand
+                        and managing harvest targets, we eliminate the bullwhip effect in agricultural supply chains.
+                    </p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="assets.js"></script>
+</body>
+
+</html>
